@@ -3,5 +3,6 @@
 
 void hello();
 void showName();
+int addNum(int, int);
 
 #endif

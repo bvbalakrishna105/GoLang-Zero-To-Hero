@@ -9,4 +9,9 @@ extern "C" {
     void showName(){
         std::cout << "showName Beesetti" << std::endl;
     }
+
+    int addNum(int a, int b) {
+        return a+b;
+    }
+
 }
