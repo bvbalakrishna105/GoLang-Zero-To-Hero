@@ -2,6 +2,6 @@ vidkrix@venky-worker:~/Desktop/work/GoLang-Zero-To-Hero/go_with_c$ g++ -shared -
 vidkrix@venky-worker:~/Desktop/work/GoLang-Zero-To-Hero/go_with_c$ go build
 vidkrix@venky-worker:~/Desktop/work/GoLang-Zero-To-Hero/go_with_c$ ./go_with_c 
 Hello from C++
-Beesetti Venkata Balakrushna
-showName Beesetti
+<Name>
+showName <Name>
 vidkrix@venky-worker:~/Desktop/work/GoLang-Zero-To-Hero/go_with_c$ 
