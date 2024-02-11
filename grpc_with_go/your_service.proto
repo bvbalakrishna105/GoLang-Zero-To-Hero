@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package grpc_with_go;
+
+option go_package = "github.com/bvbalakrishna105/GoLang-Zero-To-Hero/grpc_with_go";
+
+service YourService {
+    rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string message = 1;
+}
