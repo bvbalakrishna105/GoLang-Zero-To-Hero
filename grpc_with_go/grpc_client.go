@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	pb "your_module_path/your_service" // Import generated code
+	pb "github.com/bvbalakrishna105/GOLANG-ZERO-TO-HERO/grpc_with_go/grpc_pb/your_service" // Import generated code
 
 	"google.golang.org/grpc"
 )
