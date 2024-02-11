@@ -12,10 +12,10 @@ int main() {
 
     // Use dlsym to get the address of a function or variable in the shared library
     // For example:
-    // void (*hello)() = (void (*)())dlsym(handle, "hello");
+    void (*hello)() = (void (*)())dlsym(handle, "hello");
 
     // Call a function from the shared library
-    // hello(); 
+    hello(); 
     std::cout <<"Sucessfully loaded .so file" << std::endl;
 
     dlclose(handle);
