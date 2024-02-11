@@ -1,0 +1,7 @@
+vidkrix@venky-worker:~/Desktop/work/GoLang-Zero-To-Hero/go_with_c$ g++ -shared -o libexample.so -fPIC example.cpp
+vidkrix@venky-worker:~/Desktop/work/GoLang-Zero-To-Hero/go_with_c$ go build
+vidkrix@venky-worker:~/Desktop/work/GoLang-Zero-To-Hero/go_with_c$ ./go_with_c 
+Hello from C++
+Beesetti Venkata Balakrushna
+showName Beesetti
+vidkrix@venky-worker:~/Desktop/work/GoLang-Zero-To-Hero/go_with_c$ 
