@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package grpc_with_go;
 
-option go_package = "github.com/bvbalakrishna105/GOLANG-ZERO-TO-HERO/grpc_with_go/grpc_pb";
+option go_package = "github.com/bvbalakrishna105/GoLang-Zero-To-Hero/grpc_with_go/grpc_pb";
 
 service YourService {
     rpc SayHello (HelloRequest) returns (HelloResponse);
