@@ -1,12 +1,14 @@
+// client.go
+
 package main
 
 import (
 	"context"
 	"log"
 
-	pb "github.com/bvbalakrishna105/GOLANG-ZERO-TO-HERO/grpc_with_go/grpc_pb/your_service" // Import generated code
-
 	"google.golang.org/grpc"
+
+	pb "your_package_path/greeter" // Import the generated files
 )
 
 func main() {
@@ -15,12 +17,12 @@ func main() {
 		log.Fatalf("did not connect: %v", err)
 	}
 	defer conn.Close()
-	c := pb.NewYourServiceClient(conn)
+	c := pb.NewGreeterClient(conn)
 
-	// Call the service method
-	response, err := c.SayHello(context.Background(), &pb.HelloRequest{Name: "World"})
+	name := "Alice"
+	response, err := c.SayHello(context.Background(), &pb.HelloRequest{Name: name})
 	if err != nil {
-		log.Fatalf("Error when calling SayHello: %v", err)
+		log.Fatalf("could not greet: %v", err)
 	}
-	log.Printf("Response from server: %s", response.Message)
+	log.Printf("Greeting: %s", response.Message)
 }

@@ -1,3 +1,5 @@
+// server.go
+
 package main
 
 import (
@@ -5,15 +7,15 @@ import (
 	"log"
 	"net"
 
-	pb "your_module_path/your_service" // Import generated code
-
 	"google.golang.org/grpc"
+
+	pb "your_package_path/greeter" // Import the generated files
 )
 
 type server struct{}
 
-func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloResponse, error) {
-	return &pb.HelloResponse{Message: "Hello " + in.Name}, nil
+func (s *server) SayHello(ctx context.Context, req *pb.HelloRequest) (*pb.HelloResponse, error) {
+	return &pb.HelloResponse{Message: "Hello, " + req.Name}, nil
 }
 
 func main() {
@@ -22,7 +24,8 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 	s := grpc.NewServer()
-	pb.RegisterYourServiceServer(s, &server{})
+	pb.RegisterGreeterServer(s, &server{})
+	log.Println("Server started at :50051")
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
