@@ -1,7 +1,9 @@
 // greeter.proto
 syntax = "proto3";
 
-option go_package = "./";
+package chat;
+
+option go_package = "./chat";
 
 service Greeter {
     rpc SayHello (HelloRequest) returns (HelloResponse);

@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	pb "github.com/bvbalakrishna105/GoLang-Zero-To-Hero/venky-grpc-go/greeter" // Import generated code
+	pb "github.com/bvbalakrishna105/GoLang-Zero-To-Hero/venky-grpc-go/chat" // Import generated code
 
 	"google.golang.org/grpc"
 )
@@ -17,7 +17,7 @@ func main() {
 	defer conn.Close()
 	c := pb.NewGreeterClient(conn)
 
-	name := "Alice"
+	name := "Beesetti"
 	response, err := c.SayHello(context.Background(), &pb.HelloRequest{Name: name})
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
